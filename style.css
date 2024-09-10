@@ -1,0 +1,817 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: whitesmoke;
+    --main_color: rgba(255, 199, 0, 1);
+    --font_color1: black;
+    --font_color_2: white;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    float: left;
+}
+body {
+    width: 100vw;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    background-color: var(--main_color);
+    width: 100%;
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+.messageus{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--main_color);
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100;
+    display: flex;
+    font-size: 36px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo {
+    flex: 0 1 auto;
+    text-align: center;
+}
+.nav1, .nav2 {
+    display: flex;
+    align-items: center;
+}
+.nav1 {
+    flex: 1;
+    justify-content: flex-start;
+}
+.nav2 {
+    flex: 1;
+    justify-content: flex-end;
+}
+.nav1 > *, .nav2 > * {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav2 i {
+    font-size: 22px;
+    vertical-align: middle;
+}
+.nav2 select {
+    background-color: var(--main_color);
+}
+.logo a {
+    font-size: 22px;
+    font-weight: 600;
+}
+.nav1 > *:not(:last-child), .nav2 > *:not(:first-child) {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+}
+.nav1 > *:not(:last-child):is(:active, :hover), .nav2 > *:not(:first-child):is(:active, :hover) {
+    background-color: black;
+    color: white;
+}
+.imgs-container {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--main_color);
+}
+
+.imgs-scroll {
+    display: flex;
+    height: 85vh;
+    width: 800%; 
+    animation: scroll 20s linear infinite; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.img {
+    flex: 0 0 auto;
+    width: 50vw; 
+    height: 90%;
+    margin: 20px; 
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img a:hover {
+    cursor: pointer;
+}
+
+.img a::after {
+    content: "butterfly tote";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.img a:hover::after {
+    opacity: 1; 
+}
+
+.img1 img {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.img2 img {
+    clip-path: url(#clip-squiggle-1);
+}
+
+.img3 img {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.img4 img {
+    border-radius: 50px;
+}
+
+.img5 img {
+    clip-path: url(#clip-squiggle-1);
+}
+
+.img6 img {
+    clip-path: url(#clip-squiggle-3);
+}
+
+.img7 img {
+    clip-path: url(#clip-squiggle-2);
+}
+
+.img8 img {
+    border-radius: 50px;
+}
+
+.img9 img {
+    clip-path: url(#clip-squiggle-3);
+}
+
+.img10 img {
+    clip-path: url(#clip-squiggle-2);
+}
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+svg.clippy {
+    position: absolute;
+    top: -999px;
+    left: -999px;
+    width: 0;
+    height: 0;
+    border: 2px solid #000; 
+}
+
+
+.clippy {
+    width: 100%; 
+    height: auto;
+    
+}
+
+#clip-squiggle-1 path {
+    stroke: #000; 
+    stroke-width: 2px; 
+}
+
+#clip-squiggle-2 path {
+    stroke: #000; 
+    stroke-width: 2px; 
+}
+
+#clip-squiggle-3 path {
+    stroke: #000; 
+    stroke-width: 2px; 
+}
+
+ .products-header{
+    width: 100%;
+    height: 60vh;
+    padding: 10rem;
+    text-align: center;
+ }
+ .products-header h1:hover div {
+    color: rgba(0, 0, 0, 0.7); 
+}
+.products-header h1:hover a {
+    color: rgba(0, 0, 0, 1);
+    opacity: 1;
+}
+
+ .products-header h1{
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  text-transform: uppercase;
+ }
+ .icon-1, .icon-6 {
+    color: violet;
+}
+
+.icon-2, .icon-3 {
+    color: orange;
+}
+
+.icon-4, .icon-8 {
+    color: green;
+}
+
+.icon-5, .icon-7 {
+    color: yellow;
+}
+.our-products {
+    height: 300vh;
+    width: 100%;
+    padding: 0 10rem;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    grid-template-rows: repeat(9, auto); 
+    grid-template-columns: repeat(4, 1fr);
+    
+    grid-template-areas: 
+        "fig1 fig2 fig3 fig4"
+        "fig1 fig2 fig3 fig4"
+        "fig5 fig6 fig7 fig7"
+        "fig5 fig6 fig7 fig7"
+        "fig8 fig8 fig7 fig7"
+        "fig8 fig8 fig9 fig10"
+         "fig8 fig8 fig9 fig10"
+        "fig11 fig12 fig13 fig14"
+        "fig11 fig12 fig13 fig14"
+}
+
+.figure figure {
+    height: 60vh;
+    position: relative;
+}
+
+.figure7 figure{
+    height: 120vh;
+}
+
+.figure8 figure{
+    height: 120vh;
+}
+.figure figure img {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: block;
+}
+
+.figure figure figcaption {
+    width: 100%;
+    height: 20%;
+    position: absolute; 
+    bottom: 0; 
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px; 
+    box-sizing: border-box;
+    z-index: 1; 
+}
+.figure7 a figure .default-img,.figure7 a figure .hover-img{
+    height: 90%;
+}
+.figure8 a figure .default-img,.figure8 a figure .hover-img{
+    height: 90%;
+}
+
+
+
+.figure .new, .figure .price {
+    font-size: 20px;
+}
+
+.figure .name {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.name {
+    float: left;
+}
+
+.price {
+    float: right;
+    vertical-align: top;
+}
+.figure7 figure img, .figure8 figure img{
+    height: 108vh;
+}
+.figure7 figure figcaption, .figure8 figure figcaption{
+    height: 12vh;
+}
+
+.figure1 {
+    grid-area: fig1;
+}
+
+.figure1 figure img:hover {
+    border: 2px solid black;
+}
+
+.figure2 {
+    grid-area: fig2;
+    position: relative; 
+}
+
+.figure .default-img {
+    display: block;
+    width: 100%;
+    height: 80%; 
+}
+
+.figure .hover-img{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover; 
+   
+}
+
+.figure .hover-img{
+    background-image: url(imgs/pngtree-red-pink-green-blue-brown-vector-abstract-rounded-corners-tiles-mosaic-picture-image_1817943.jpg);
+
+}
+
+
+.figure a:hover .hover-img {
+    display: block; 
+}
+
+.figure a:hover .default-img{
+    display: none;
+}
+
+
+.figure3{
+    grid-area: fig3;
+}
+.figure3 a:hover .hover-img{
+    background-image: url(imgs/blue-green-10026670.webp);
+}
+.figure4{
+    grid-area: fig4;
+}
+.figure4 a:hover .hover-img{
+    background-image: url(imgs/blue-green-10026670.webp);
+}
+.figure5{
+    grid-area: fig5;
+}
+.figure5 a:hover .hover-img{
+    background-image: url(imgs/red_green_blue_white_squares_by_10binary_d589c0e-fullview.jpg);
+}
+.figure6{
+    grid-area: fig6;
+}
+.figure6 a:hover .hover-img{
+    background-image: url(imgs/th\ \(2\).jpeg);
+}
+.figure7{
+    grid-area: fig7;
+}
+.figure7 a:hover .hover-img{
+    background-image: url(imgs/cute-strawberry-seamless-pattern-vector.jpg);
+}
+.figure8{
+    grid-area: fig8;
+}
+.figure8 a:hover .hover-img{
+    background-image: url(imgs/th\ \(2\).jpeg);
+}
+.figure9{
+    grid-area: fig9;
+}
+.figure9 a:hover .hover-img{
+    background-image: url(imgs/th\ \(2\).jpeg);
+}
+.figure10{
+    grid-area: fig10;
+}
+.figure10 a:hover .hover-img{
+    background-image: url(imgs/th\ \(1\).jpeg);
+}
+.figure11{
+    grid-area: fig11;
+}
+.figure11 a:hover .hover-img{
+    background-image: url(imgs/th\ \(2\).jpeg);
+}
+.figure12{
+    grid-area: fig12;
+}
+.figure12 a:hover .hover-img{
+    background-image: url(imgs/th\ \(3\).jpeg);
+}
+.figure13{
+    grid-area: fig13;
+}
+.figure13 a:hover .hover-img{
+    background-image: url(imgs/th\ \(1\).jpeg);
+}
+.figure14{
+    grid-area: fig14;
+}
+.figure14 a:hover .hover-img{
+    background-image: url(imgs/th\ \(3\).jpeg);
+}
+footer{
+    margin-top: 10rem;
+    position: relative;
+    height: 70vh;
+    background-color: orangered;
+    width: 100vw;
+    bottom: 0;
+    padding-top: 5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    overflow: hidden;
+}
+footer .part1 div{
+    margin: auto 3rem;
+}
+.objects-inspire{
+    font-size: 36px;
+    font-weight: 600;
+}
+.nav1-footer ul li{
+    list-style: none;
+    padding: 10px;
+}
+.nav1-footer a:hover{
+    text-decoration: underline;
+}
+.power{
+    width: 30%;
+}
+.power, .nav1-footer{
+    font-size: 20px;
+    font-weight: 200;
+}
+.power a{
+    font-weight: 600;
+}
+.power a:hover{
+    color: blue;
+}
+.nav2-footer{
+    display:inline-block;
+    position: absolute;
+    top: 45vh;
+    left: 20%;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.nav2-footer a:hover{
+    text-decoration: underline;
+}
+.nav2-footer ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 1rem;
+}
+.toup{
+    font-size: 65px;
+    position: absolute;
+    top: 45vh;
+    right: 10%;
+}
+.toup a:hover{
+    color: white;
+}
+.footer-scroll{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 30px;
+    width: 100%;
+    height: 5vh;
+    padding: 0;
+    text-transform: uppercase;
+}
+.footer-scroll-content {
+    white-space: nowrap; 
+    animation: scroll1 20s linear infinite;
+}
+
+.footer-scroll i{
+    color: white;
+    font-size: 26px;
+}
+@keyframes scroll1 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@media (width<481px) {
+    header .nav1 a:first-of-type{
+        display: none;
+    }
+    header .nav1 a:nth-of-type(2){
+        display: none;
+    }
+    .cart p {
+        display: none;
+    }
+    
+    .cart::before {
+        content: "0"; 
+        text-align: center; 
+    }
+    header .nav2 select{
+        display: none;
+    }
+    header .logo a {
+        font-size: 16px;
+    }
+    header{
+        padding: 1rem;
+        text-align: center;
+    }
+    .products-header{
+        padding: 2rem .5rem;
+    }
+    .products-header h1{
+        font-size: 24px;
+    }
+    .our-products {
+        height: 650vh;
+        width: 100%;
+        padding: 1rem;
+        display: grid;
+        row-gap: 2rem;
+        column-gap: 1rem;
+        grid-template-rows: repeat(18, auto); 
+        grid-template-columns: repeat(2, 1fr);
+        
+        grid-template-areas: 
+            "fig1 fig2"
+            "fig1 fig2"
+            "fig3 fig4"
+            "fig3 fig4"
+            "fig5 fig6"
+            "fig5 fig6"
+            "fig7 fig7"
+            "fig7 fig7"
+            "fig7 fig7"
+            "fig9 fig10"
+            "fig9 fig10"
+             "fig8 fig8"
+             "fig8 fig8"
+             "fig8 fig8"
+            "fig11 fig12" 
+            "fig11 fig12" 
+            "fig13 fig14"
+            "fig13 fig14"
+    }
+    .figure .new{
+        display: none;
+    } 
+    .figure .name {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+
+  
+    
+footer{
+    margin-top: 5rem;
+    height: 120vh;
+    padding-top: 2rem;
+    position: relative;
+}
+footer .shape{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+
+.objects-inspire{
+    margin-top: 1rem;
+    left: 0px;
+    top: 25vh;
+    position: absolute;
+}
+.nav1-footer{
+    position: absolute;
+    margin-top: 1rem;
+    left: 0;
+    top: 45vh;
+}
+.nav2-footer{
+    margin-top: 1rem;
+    top: 67vh; 
+    left: 10vw;
+}
+.nav2-footer ul li{
+    display: block;
+    font-size: 16px;
+}
+
+.power { 
+    width: 50%; 
+    margin-top: 1rem; 
+    left: 50%;
+    top: 50vh;
+    position: absolute;
+}
+
+footer .toup{
+    font-size: 50px;
+    position: absolute;
+    top: 80vh;
+    right: 10vw;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    header .nav1 a:first-of-type{
+        display: none;
+    }
+    header .nav1 a:nth-of-type(2){
+        display: none;
+    }
+    header{
+        padding: 0;
+    }
+    
+    .cart p {
+        display: none;
+    }
+    
+    .cart::before {
+        content: "0"; 
+        text-align: center; 
+    }
+    
+    .products-header{
+        padding: 2rem .5rem;
+    }
+    .products-header h1{
+        font-size: 36px;
+    }
+    .our-products {
+        padding: 0;
+        height: 230vh;
+        row-gap: .5rem;
+        column-gap: 1rem;
+        grid-template-areas: 
+            "fig1 fig2 fig3 fig4"
+            "fig1 fig2 fig3 fig4"
+            "fig5 fig6 fig7 fig7"
+            "fig5 fig6 fig7 fig7"
+            "fig8 fig8 fig7 fig7"
+            " fig8 fig8 fig9 fig10"
+            " fig8 fig8 fig9 fig10"
+            "fig11 fig12 fig13 fig14" 
+            "fig11 fig12 fig13 fig14" 
+    }
+    .figure .new{
+        display: none;
+    } 
+    .figure .name {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .figure .price{
+        font-size: 16px;
+    }
+    .figure figure {
+        height: 40vh;
+        position: relative; 
+    }
+
+    
+    .figure7 figure{
+        height: 80vh;
+    }
+    .figure7 figcaption{
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .figure8 figure{
+        height: 80vh;
+    }
+    .figure7 figure img, .figure8 figure img{
+        height: 72vh;
+    }
+    .figure7 figure figcaption, .figure8 figure figcaption{
+        height: 8vh;
+    }
+    footer{
+        margin-top: 2rem;
+        position: relative;
+        height: 90vh;
+        width: 100vw;
+        padding-top: 5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    footer .part1 div{
+        margin: auto 1rem;
+    }
+    .objects-inspire{
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .nav1-footer{
+        display:inline-block;
+        position: absolute;
+        font-size: 26px;
+    }
+    .nav1-footer ul li{
+        list-style: none;
+        padding: 10px;
+        display:inline-block;
+    }
+
+    .nav2-footer{
+        display:inline-block;
+        position: absolute;
+        top: 70vh;
+        left: 10%;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .power{
+        margin-top: 5rem;
+        width: 50%;
+        text-align: center;
+        margin-left: 5rem;
+    }
+    .toup{
+        font-size: 65px;
+        position: absolute;
+        top: 70vh;
+        right: 10%;
+    }
+    .toup a:hover{
+        color: white;
+    }
+}
